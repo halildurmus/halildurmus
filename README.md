@@ -1,6 +1,6 @@
 ## Hi 👋, I'm Halil İbrahim Durmuş
 
-[![Visits](https://badges.pufler.dev/visits/halildurmus/halildurmus?style=flat)](https://github.com/halildurmus)
+[![Visits](https://visitor-badge.glitch.me/badge?page_id=halildurmus.halildurmus)](https://github.com/halildurmus)
 [![GitHub followers](https://img.shields.io/github/followers/halildurmus.svg?style=social&label=Follow)](https://github.com/halildurmus?tab=followers)
 
 I'm a **Software Engineer** and currently looking for full-time opportunities in **Backend Development**. 

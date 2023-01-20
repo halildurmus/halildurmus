@@ -34,7 +34,7 @@ I'm a **Software Engineer** and currently looking for full-time opportunities in
 
 ## 📫 Contact me
 
-[![halildurmus97@gmail.com](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:halildurmus97@gmail.com)
+[![durmushalil@proton.me](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:halildurmus97@gmail.com)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/halildurmus)
   
 ---

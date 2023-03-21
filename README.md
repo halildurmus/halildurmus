@@ -1,6 +1,5 @@
 ## Hi 👋, I'm Halil İbrahim Durmuş
 
-[![Visits](https://visitor-badge.glitch.me/badge?page_id=halildurmus.halildurmus)](https://github.com/halildurmus)
 [![GitHub followers](https://img.shields.io/github/followers/halildurmus.svg?style=social&label=Follow)](https://github.com/halildurmus?tab=followers)
 
 ## 📫 Contact me

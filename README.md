@@ -1,4 +1,4 @@
-## Hi 👋, I'm Halil Ibrahim Durmus
+## Hi 👋, I'm Halil İbrahim Durmuş
 
 [![GitHub followers](https://img.shields.io/github/followers/halildurmus.svg?style=social&label=Follow)](https://github.com/halildurmus?tab=followers)
 

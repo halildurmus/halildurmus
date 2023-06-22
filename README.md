@@ -9,5 +9,7 @@
   
 ---
 
-![My GitHub stats-Dark](https://github-readme-stats.vercel.app/api?username=halildurmus&show_icons=true&theme=radical#gh-dark-mode-only)
-![My GitHub stats-Light](https://github-readme-stats.vercel.app/api?username=halildurmus&show_icons=true#gh-light-mode-only)
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api?username=halildurmus&count_private=true&show_icons=true&theme=radical">
+  <img src="https://github-readme-stats.vercel.app/api?username=halildurmus&count_private=true&show_icons=true">
+</picture>

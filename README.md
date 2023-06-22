@@ -9,4 +9,5 @@
   
 ---
 
-![My GitHub stats](https://github-readme-stats.vercel.app/api?username=halildurmus&count_private=true&show_icons=true&theme=radical)
+![My GitHub stats-Dark](https://github-readme-stats.vercel.app/api?username=halildurmus&show_icons=true&theme=radical#gh-dark-mode-only)
+![My GitHub stats-Light](https://github-readme-stats.vercel.app/api?username=halildurmus&show_icons=true#gh-light-mode-only)

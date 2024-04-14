@@ -1,0 +1,90 @@
+name: Dart Package Workflow
+
+on:
+  workflow_call:
+    inputs:
+      analyze_directories:
+        required: false
+        type: string
+        default: 'lib test'
+      dart_sdk:
+        required: false
+        type: string
+        default: 'stable'
+      run_tests:
+        required: false
+        type: boolean
+        default: true
+      runs_on:
+        required: false
+        type: string
+        default: 'ubuntu-latest'
+      setup:
+        required: false
+        type: string
+        default: ''
+      upload_coverage:
+        required: false
+        type: boolean
+        default: false
+      working_directory:
+        required: false
+        type: string
+        default: '.'
+
+jobs:
+  build:
+    defaults:
+      run:
+        working-directory: ${{inputs.working_directory}}
+
+    runs-on: ${{inputs.runs_on}}
+
+    steps:
+      - name: 📚 Git Checkout
+        uses: actions/checkout@v4
+
+      - name: 🎯 Setup Dart
+        uses: dart-lang/setup-dart@v1
+        with:
+          sdk: ${{inputs.dart_sdk}}
+
+      - name: 📝 Print Dart SDK version
+        run: dart --version
+
+      - name: 📦 Install Dependencies
+        run: dart pub get
+
+      - name: ⚙️ Run Setup
+        if: "${{inputs.setup != ''}}"
+        run: ${{inputs.setup}}
+
+      - name: ✨ Check Formatting
+        run: dart format --set-exit-if-changed .
+
+      - name: 🕵️ Analyze
+        run: dart analyze --fatal-infos --fatal-warnings ${{inputs.analyze_directories}}
+
+      - name: 🧪 Run Tests
+        if: ${{ inputs.run_tests }}
+        run: dart test
+
+      - name: 📦 Install coverage
+        if: ${{ inputs.upload_coverage }}
+        run: dart pub global activate coverage
+
+      - name: 📊 Generate Code Coverage
+        if: ${{ inputs.upload_coverage }}
+        run: dart pub global run coverage:test_with_coverage
+
+      - name: 📡 Upload Code Coverage Reports to Codecov
+        if: ${{ inputs.upload_coverage }}
+        uses: codecov/codecov-action@v3
+        env:
+          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+        with:
+          files: coverage/lcov.info
+
+      - name: 📒 Check API Reference Documentation
+        if: ${{ inputs.dart_sdk == 'dev' && inputs.runs_on == 'windows-latest' }}
+        run: dart doc --validate-links
